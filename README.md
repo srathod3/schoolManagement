@@ -1,0 +1,2 @@
+# schoolManagement
+new repo
