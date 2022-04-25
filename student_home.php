@@ -30,7 +30,7 @@ if(isset($_SESSION['user_data']))
 	} */
 	
 	$sql="select result_data.*, subject.subject_name from result_data, subject 
-	where subject.id=result_data.subject_id and result_data.result_id";
+	where subject.id=result_data.subject_id and result_data.result_id='".$_SESSION['user_data']['id']."'";
 	$result=mysqli_query($con,$sql);
 	if($result){
 		while($row=mysqli_fetch_assoc($result)) {
